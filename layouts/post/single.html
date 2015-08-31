@@ -1,0 +1,15 @@
+<h1>{{ .Title }}</h1>
+
+{{ .Content }}
+
+<h2>FAQ items</h2>
+{{ range where .Site.Pages "Type" "faq" }}
+    <h3>{{ .Title }}</h3>
+    	{{ .Content }}
+{{ end }}
+
+<h2>Quotes</h2>
+{{ range where .Site.Pages "Type" "quote" }}
+    <h3>{{ .Title }}</h3>
+    	{{ .Content }}
+{{ end }}

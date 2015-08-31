@@ -1,0 +1,6 @@
+{{ .Title }}
+
+{{ range where .Data.Pages "Type" "post" }}
+    <h2>{{ .Title }}</h2>
+    	{{ .Content }}
+{{ end }}
